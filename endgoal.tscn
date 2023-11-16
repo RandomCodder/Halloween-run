@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj8ewifjqn61v"]
+
+[ext_resource type="Texture2D" uid="uid://r4hs2b611yj" path="res://New Piskel (3).png" id="1_1d0sk"]
+[ext_resource type="Script" path="res://endgoal.gd" id="1_ur1al"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nu5rb"]
+size = Vector2(13, 18)
+
+[node name="endgoal" type="Area2D"]
+script = ExtResource("1_ur1al")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.5, 7)
+shape = SubResource("RectangleShape2D_nu5rb")
+
+[node name="NewPiskel(3)" type="Sprite2D" parent="."]
+texture = ExtResource("1_1d0sk")
+hframes = 5
+vframes = 5
+frame = 21
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

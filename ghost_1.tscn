@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvrruebhbawmi"]
+
+[ext_resource type="Script" path="res://ghost_1.gd" id="1_kibtv"]
+[ext_resource type="Texture2D" uid="uid://dohwwc06rf2oh" path="res://New Piskel (8).png" id="1_t3gkn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6184e"]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipssw"]
+size = Vector2(6, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0cgp"]
+size = Vector2(1, 7)
+
+[node name="Ghost1" type="RigidBody2D"]
+position = Vector2(-1, 2)
+script = ExtResource("1_kibtv")
+
+[node name="NewPiskel(8)" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("1_t3gkn")
+hframes = 8
+vframes = 8
+frame = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_6184e")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_ipssw")
+
+[node name="HealthCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthCollision"]
+position = Vector2(8, 6)
+shape = SubResource("RectangleShape2D_r0cgp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HealthCollision"]
+position = Vector2(-8, 6)
+shape = SubResource("RectangleShape2D_r0cgp")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="HealthCollision" to="." method="_on_health_collision_body_entered"]

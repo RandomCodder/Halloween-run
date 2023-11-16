@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://clygiuumgrgs1"]
+
+[ext_resource type="Texture2D" uid="uid://d33a1kumq5666" path="res://New Piskel (2).png" id="1_i8onq"]
+
+[node name="skullprop3" type="Sprite2D"]
+hframes = 4
+vframes = 5
+frame = 2
+
+[node name="NewPiskel(2)" type="Sprite2D" parent="."]
+texture = ExtResource("1_i8onq")
+hframes = 4
+vframes = 5
+frame = 3

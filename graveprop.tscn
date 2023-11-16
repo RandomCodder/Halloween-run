@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b53luc7fs6bd7"]
+
+[ext_resource type="Texture2D" uid="uid://d33a1kumq5666" path="res://New Piskel (2).png" id="1_8madr"]
+
+[node name="graveprop" type="Sprite2D"]
+
+[node name="NewPiskel(2)" type="Sprite2D" parent="."]
+texture = ExtResource("1_8madr")
+hframes = 4
+vframes = 5

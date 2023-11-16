@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbb2my387exrf"]
+
+[ext_resource type="Script" path="res://candy_4(yellow).gd" id="1_2qrey"]
+[ext_resource type="Texture2D" uid="uid://r4hs2b611yj" path="res://New Piskel (3).png" id="1_lqafn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t784i"]
+size = Vector2(17, 17)
+
+[node name="candy4(yellow)" type="Area2D"]
+script = ExtResource("1_2qrey")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 0.5)
+shape = SubResource("RectangleShape2D_t784i")
+
+[node name="NewPiskel(3)" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_lqafn")
+hframes = 5
+vframes = 5
+frame = 4
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

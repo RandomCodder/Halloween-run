@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwjyl2ag55yy8"]
+
+[ext_resource type="Script" path="res://pumpkin_2.gd" id="1_dmlem"]
+[ext_resource type="Texture2D" uid="uid://dohwwc06rf2oh" path="res://New Piskel (8).png" id="1_u8iva"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u86vv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpug2"]
+size = Vector2(12, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pc80"]
+size = Vector2(1, 10)
+
+[node name="pumpkin2" type="RigidBody2D"]
+script = ExtResource("1_dmlem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_u86vv")
+
+[node name="NewPiskel(8)" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_u8iva")
+hframes = 8
+vframes = 8
+frame = 7
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_rpug2")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_4pc80")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-10, 1)
+shape = SubResource("RectangleShape2D_4pc80")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

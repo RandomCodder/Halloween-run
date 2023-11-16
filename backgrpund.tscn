@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://bys2y50w2qhmj"]
+
+[ext_resource type="Texture2D" uid="uid://bxfybn5mw5nsd" path="res://New Piskel (4).png" id="1_y5u4n"]
+
+[node name="Background" type="Sprite2D"]
+position = Vector2(0, 3)
+hframes = 2
+vframes = 2
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(2.77705, 1.71615)
+texture = ExtResource("1_y5u4n")
+hframes = 2
+vframes = 3
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="NewPiskel(4)"]
+position = Vector2(67.5913, 0)
+scale = Vector2(1.11166, 0.999659)
+texture = ExtResource("1_y5u4n")
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="NewPiskel(4)/NewPiskel(4)"]
+position = Vector2(67.1834, -0.163282)
+scale = Vector2(1.10447, 1.00987)
+texture = ExtResource("1_y5u4n")
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="NewPiskel(4)/NewPiskel(4)/NewPiskel(4)"]
+position = Vector2(64.573, 0.0856064)
+scale = Vector2(1.02476, 1.00535)
+texture = ExtResource("1_y5u4n")
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="NewPiskel(4)/NewPiskel(4)/NewPiskel(4)/NewPiskel(4)"]
+position = Vector2(58.8472, -0.0027274)
+scale = Vector2(0.838407, 0.999829)
+texture = ExtResource("1_y5u4n")
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="NewPiskel(4)2" type="Sprite2D" parent="NewPiskel(4)/NewPiskel(4)"]
+position = Vector2(270.897, 0)
+scale = Vector2(1.11166, 0.999659)
+texture = ExtResource("1_y5u4n")
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="NewPiskel(4)/NewPiskel(4)/NewPiskel(4)2"]
+position = Vector2(67.1834, -0.163282)
+scale = Vector2(1.10447, 1.00987)
+texture = ExtResource("1_y5u4n")
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="NewPiskel(4)/NewPiskel(4)/NewPiskel(4)2/NewPiskel(4)"]
+position = Vector2(64.573, 0.0856064)
+scale = Vector2(1.02476, 1.00535)
+texture = ExtResource("1_y5u4n")
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="NewPiskel(4)" type="Sprite2D" parent="NewPiskel(4)/NewPiskel(4)/NewPiskel(4)2/NewPiskel(4)/NewPiskel(4)"]
+position = Vector2(58.8472, -0.0027274)
+scale = Vector2(0.838407, 0.999829)
+texture = ExtResource("1_y5u4n")
+hframes = 2
+vframes = 3
+frame = 1

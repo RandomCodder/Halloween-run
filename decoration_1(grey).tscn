@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjvm0imkslgqs"]
+
+[ext_resource type="Texture2D" uid="uid://d33a1kumq5666" path="res://New Piskel (2).png" id="1_ccodv"]
+
+[node name="decoration1(grey)" type="Sprite2D"]
+
+[node name="NewPiskel(2)" type="Sprite2D" parent="."]
+texture = ExtResource("1_ccodv")
+hframes = 4
+vframes = 5
+frame = 14

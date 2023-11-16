@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://drpux3gfy82sj"]
+
+[ext_resource type="Texture2D" uid="uid://r4hs2b611yj" path="res://New Piskel (3).png" id="1_bd2bl"]
+[ext_resource type="Script" path="res://skittles(blue).gd" id="1_llvsw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qompa"]
+radius = 6.0
+
+[node name="skittles(blue)" type="Area2D"]
+script = ExtResource("1_llvsw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_qompa")
+
+[node name="NewPiskel(3)" type="Sprite2D" parent="."]
+texture = ExtResource("1_bd2bl")
+hframes = 5
+vframes = 5
+frame = 13
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
